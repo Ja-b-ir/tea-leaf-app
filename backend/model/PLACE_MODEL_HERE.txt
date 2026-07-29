@@ -1,0 +1,16 @@
+Two ways to provide the model file:
+
+OPTION A — Put it here directly (fine for running on your own computer):
+    Copy best_phase2.keras into this folder, so the full path is:
+        backend/model/best_phase2.keras
+
+OPTION B — Host it elsewhere and auto-download it (recommended if you're
+using GitHub + Render, since GitHub's browser upload rejects files over
+25MB):
+    1. Upload best_phase2.keras to a free Hugging Face "Model" repo
+       (huggingface.co -> New Model -> upload the file there).
+    2. Copy its direct file URL, e.g.:
+       https://huggingface.co/YOUR-USERNAME/YOUR-REPO/resolve/main/best_phase2.keras
+    3. On Render, add an environment variable named MODEL_URL set to that
+       link. The app downloads the file automatically the first time it
+       starts — you never need to fit it through GitHub at all.
